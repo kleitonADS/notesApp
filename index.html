@@ -24,11 +24,18 @@
     <div class="container">
         <div id="switch" onclick="switchbutton()">
             <button></button>
-            <span></span>
+          
         </div>
 
-        <h1>Notes</h1>
-        <button type="button">Criar Notes</button>
+        <h1 class="title-notes">
+          <img src="./assets/img/draft-line-dark.svg" alt=" image notes white" srcset="">   Notes</h1>
+        <button class="button-notes" type="button">
+            <img src="./assets/img/edit-line.svg" alt=" image notes white" srcset="">Criar Notes</button>
+        <div class="notes-container">
+            <p contenteditable="true" class="input-box">
+                <img src="./assets/img/delete-bin-line.svg" alt="trash-icon" >
+            </p>
+        </div>
     </div>
 
     <script src="./assets/javascript/functions.js" type="text/javascript"></script>

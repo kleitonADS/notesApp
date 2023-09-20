@@ -6,91 +6,113 @@
 }
 
 :root {
-  --text-color : #fff;
-  --main-theme-color : #A8EB12;
-  --bg-container : linear-gradient(to left top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  --surface-color: rgba(255, 255, 255, 0.1);
-  --stroke-color: rgba(255, 255, 255, 0.5);
+  
+  --text-color : #303030;
+  --bg-body : linear-gradient(to left top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  --bg-hover-bt-notes : #fff;
+
+  --bs-switch-button : 19px 19px 37px #75be30,-19px -19px 37px #9fff42;
+
+  --url-switch-button : url(/assets/img/sun-line.svg)
 }
 
 body{
   width: 100%;
   min-height: 100vh;
-  background-image: var(--bg-container );
+  background-image: var(--bg-body);
   color: var(--text-color);
-  padding-top: 4%;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 /* Switch */
 #switch {
-  position: relative;
-  width: 64px;
-  margin: 4px auto;
-  left: -40%;
+display: flex;
 }
 
 #switch button {
-  width: 23px;
-  height: 23px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: var(--text-color);
-  border: 0;
-  position: absolute;
+  background: var(--url-switch-button) no-repeat center;
+  box-shadow: var(--bs-switch-button);
+  border: 1px solid #30303012;
   z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
   left: 0;
-  animation: slide-back 0.2s;
+  cursor: pointer;
+ 
 }
 
 #switch button:hover {
-  outline: 4px solid var(--main-theme-color);
-}
-
-#switch span {
-  display: block;
-  width: 48px;
-  height: 24px;
-  border-radius: 9999px;
-  border: 1px solid var(--stroke-color);
-  background: var(--surface-color);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  
-}
-
-.dark #switch button {
-  animation: slide-in 0.4s forwards;
+  background: #0000001a url(/assets/img/moon-line.svg) no-repeat center;
 }
 
 .container{
   width: 100%;
 }
 
+.title-notes {
+  display: flex;
+  padding-top: 30px;
+}
+
+.button-notes {
+  display: flex;
+  align-items: center;
+  background: transparent ;
+  font-size: 16px;
+  outline: 0;
+  border: 0;
+  border-radius: 40px;
+  padding: 10px 80px;
+  margin: 30px 0 20px;
+  cursor: pointer;
+  border: 2px solid var(--text-color);
+}
+
+.button-notes:hover {
+  background: var(--bg-hover-bt-notes);
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  background: transparent;
+  color:#333;
+  padding: 20px;
+  margin: 20px 0;
+  outline: none;
+  border-radius: 12px;
+  border: 2px solid var(--text-color);
+}
+
+.input-box img {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+
 /* Dark Theme Mode */
 .dark {
-   --main-theme-color : #373B3E;
-   --bg-container : linear-gradient(to left bottom, #051937, #0f223a, #1b2b3b, #29333d, #373b3e);
+    --text-color : #fff;
+    --bg-body: linear-gradient(to left bottom, #051937, #0f223a, #1b2b3b, #29333d, #373b3e);
+    --bs-switch-button : box-shadow:  19px 19px 37px #152232,
+             -19px -19px 37px #1d2e44;
+    --bg-hover-bt-notes : #000;        
+    --url-switch-button : #0000001a url(/assets/img/moon-line-w.svg) ;
+
+ 
+}
+
+.dark #switch button:hover {
+  background: #0000001a url(/assets/img/sun-line-w.svg) no-repeat center;
 }
 
 
-/* animation switch */
-@keyframes slide-in {
-  from {
-    left: 0;
-  }
 
-  to {
-    left: 34%;
-  }
-}
 
-@keyframes slide-back {
-  from {
-    left: 34%;
-  }
-
-  to {
-    left: 0;
-  }
-}
