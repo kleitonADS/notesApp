@@ -4,3 +4,93 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+:root {
+  --text-color : #fff;
+  --main-theme-color : #A8EB12;
+  --bg-container : linear-gradient(to left top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-image: var(--bg-container );
+  color: var(--text-color);
+  padding-top: 4%;
+}
+
+/* Switch */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+  left: -40%;
+}
+
+#switch button {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--text-color);
+  border: 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 4px solid var(--main-theme-color);
+}
+
+#switch span {
+  display: block;
+  width: 48px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
+}
+
+.dark #switch button {
+  animation: slide-in 0.4s forwards;
+}
+
+.container{
+  width: 100%;
+}
+
+/* Dark Theme Mode */
+.dark {
+   --main-theme-color : #373B3E;
+   --bg-container : linear-gradient(to left bottom, #051937, #0f223a, #1b2b3b, #29333d, #373b3e);
+}
+
+
+/* animation switch */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 34%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 34%;
+  }
+
+  to {
+    left: 0;
+  }
+}
