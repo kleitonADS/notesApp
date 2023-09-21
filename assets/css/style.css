@@ -55,6 +55,7 @@ display: flex;
 .title-notes {
   display: flex;
   padding-top: 30px;
+  
 }
 
 .button-notes {
@@ -62,6 +63,7 @@ display: flex;
   align-items: center;
   background: transparent ;
   font-size: 16px;
+  color: var(--text-color);
   outline: 0;
   border: 0;
   border-radius: 40px;
@@ -81,7 +83,7 @@ display: flex;
   max-width: 500px;
   min-height: 150px;
   background: transparent;
-  color:#333;
+  color:var(--text-color);
   padding: 20px;
   margin: 20px 0;
   outline: none;
@@ -100,18 +102,19 @@ display: flex;
 /* Dark Theme Mode */
 .dark {
     --text-color : #fff;
-    --bg-body: linear-gradient(to left bottom, #051937, #0f223a, #1b2b3b, #29333d, #373b3e);
+    --bg-body: linear-gradient(to bottom, #051937, #0f223a, #1b2b3b, #29333d, #373b3e);;
     --bs-switch-button : box-shadow:  19px 19px 37px #152232,
              -19px -19px 37px #1d2e44;
-    --bg-hover-bt-notes : #000;        
+    --bg-hover-bt-notes : #133055;
     --url-switch-button : #0000001a url(/assets/img/moon-line-w.svg) ;
-
- 
 }
 
 .dark #switch button:hover {
-  background: #0000001a url(/assets/img/sun-line-w.svg) no-repeat center;
+  background: #ffffff1a url(/assets/img/sun-line-w.svg) no-repeat center;
 }
+
+
+
 
 
 
