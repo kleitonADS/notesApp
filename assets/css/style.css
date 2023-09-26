@@ -45,7 +45,7 @@ display: flex;
 }
 
 #switch button:hover {
-  background: #0000001a url(/assets/img/moon-line.svg) no-repeat center;
+  background: #0000001a url(/notesApp/assets/img/moon-line.svg) no-repeat center;
 }
 
 .container{
