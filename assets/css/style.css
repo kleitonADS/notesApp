@@ -45,7 +45,7 @@ display: flex;
 }
 
 #switch button:hover {
-  background: #0000001a url(./assets/img/moon-line.svg) no-repeat center;
+  background: #0000001a url(/assets/img/moon-line.svg) no-repeat center;
 }
 
 .container{
@@ -106,11 +106,11 @@ display: flex;
     --bs-switch-button : box-shadow:  19px 19px 37px #152232,
              -19px -19px 37px #1d2e44;
     --bg-hover-bt-notes : #133055;
-    --url-switch-button : #0000001a url(./assets/img/moon-line-w.svg) ;
+    --url-switch-button : #0000001a url(/assets/img/moon-line-w.svg) ;
 }
 
 .dark #switch button:hover {
-  background: #ffffff1a url(./assets/img/sun-line-w.svg) no-repeat center;
+  background: #ffffff1a url(/assets/img/sun-line-w.svg) no-repeat center;
 }
 
 
