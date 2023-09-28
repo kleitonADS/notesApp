@@ -67,7 +67,7 @@ display: flex;
   outline: 0;
   border: 0;
   border-radius: 40px;
-  padding: 10px 80px;
+  padding: 10px 65px;
   margin: 30px 0 20px;
   cursor: pointer;
   border: 2px solid var(--text-color);
@@ -96,6 +96,15 @@ display: flex;
   bottom: 15px;
   right: 15px;
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  padding: 20px 0px;
+}
+
+footer a {
+  color: var(--text-color)
 }
 
 

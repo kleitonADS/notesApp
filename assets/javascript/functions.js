@@ -47,17 +47,7 @@
       let img = document.createElement("img");
       inputBox.className = "input-box";
       inputBox.setAttribute("contenteditable", "true")
-      
-
-    if (html.classList.contains("dark")) {
-     
-      img.src = "./assets/img/delete-bin-line-w.svg"
-
-    } else {
       img.src = "./assets/img/delete-bin-line.svg"
-    }
-
-
       notesContainer.appendChild(inputBox).appendChild(img)
     })
 
@@ -67,7 +57,6 @@
       if(e.target.tagName === "IMG"){
         e.target.parentElement.remove();
         updateStorage();
-        console.log("save remove")
       }
       else if( e.target.tagName === "P"){
         notes = document.querySelectorAll(".input-box");
